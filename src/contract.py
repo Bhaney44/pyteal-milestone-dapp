@@ -41,7 +41,7 @@ def approval_program():
             Assert(Txn.application_args.length() == Int(3)),
 
             # set the states
-            # we set the global contract deploer to the sender of the transaction
+            # we set the global contract deployer to the sender of the transaction
             App.globalPut(global_creator, Txn.sender()),
             # we set the client address
             App.globalPut(global_client, Txn.application_args[0]),
